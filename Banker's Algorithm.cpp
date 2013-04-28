@@ -170,7 +170,6 @@ void stateCheck()
         }
         cout<<">";
         cout<<"\nIncoming request: ";
-        //::requestProcess = rand() % numberOfProcesses;
         ::requestProcess = 1;
         cout<<"\n\tProcess: "<<::requestProcess;
         cout<<"\n\tRequested resources: (";
@@ -179,7 +178,6 @@ void stateCheck()
         ::requestResources[2] = 2;
         for(i = 0; i < typesOfResources; i++)
         {
-            //::requestResources[i] = rand() % ::available[i];
             cout<<::requestResources[i];
             if(i < (typesOfResources - 1))
                 cout<<", ";
