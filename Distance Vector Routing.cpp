@@ -61,7 +61,7 @@ int main()
             {
             	for(k = 0; k < nodes; k++)
                 {
-                	if((distanceVector[i][j] + distanceVector[j][k]) < distanceVector[i][k])
+               	    if((distanceVector[i][j] + distanceVector[j][k]) < distanceVector[i][k])
                     {
                     	distanceVector[i][k] = distanceVector[i][j] + distanceVector[j][k];
                         via[i][k] = j + 1;
