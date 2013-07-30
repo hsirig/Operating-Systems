@@ -25,12 +25,12 @@ int main()
     {
     	for(j = 0; j < nodes; j++)
         {
-            if(i == j)
+        	if(i == j)
             {
-           		cout<<"\n\t\t"<<(i + 1)<<" - "<<(j + 1)<<": 0\n";
-           		continue;
-           	}
-           	else if((distanceVector[i][j] != INT_MAX) && (i < j))
+           	    cout<<"\n\t\t"<<(i + 1)<<" - "<<(j + 1)<<": 0\n";
+           	    continue;
+            }
+            else if((distanceVector[i][j] != INT_MAX) && (i < j))
            	{
           	    cout<<"\n\t\t"<<(i + 1)<<" - "<<(j + 1)<<": ";
            	    cin>>temp;
@@ -44,11 +44,11 @@ int main()
             }
             else
             {
-                 if(distanceVector[i][j] > 50000)
-            	     cout<<"\n\t\tCost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": -"<<"\n";
+                if(distanceVector[i][j] > 50000)
+            		cout<<"\n\t\tCost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": -"<<"\n";
                 else
-                     cout<<"\n\t\tCost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": "<<distanceVector[i][j]<<"\n";
-            }
+                    cout<<"\n\t\tCost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": "<<distanceVector[i][j]<<"\n";
+        	}
         }       
 	}
     for(i = 0; i < nodes; i++)
