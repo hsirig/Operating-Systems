@@ -25,10 +25,10 @@ int main()
     {
     	for(j = 0; j < nodes; j++)
         {
-        	if(i == j)
-           	{
+            if(i == j)
+            {
            		cout<<"\n\t\t"<<(i + 1)<<" - "<<(j + 1)<<": 0\n";
-                continue;
+           		continue;
            	}
            	else if((distanceVector[i][j] != INT_MAX) && (i < j))
            	{
