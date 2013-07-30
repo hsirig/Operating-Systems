@@ -3,7 +3,7 @@
 #define INT_MAX 10
 int main()
 {
-	int nodes, i, j, k, temp;
+    int nodes, i, j, k, temp;
     cout<<"\n\n\n\t\t\tDISTANCE VECTOR ROUTING";
     cout<<"\n\n\n\tEnter the no. of nodes: ";
     cin>>nodes;
@@ -25,7 +25,7 @@ int main()
     {
     	for(j = 0; j < nodes; j++)
         {
-           	if(i == j)
+        	if(i == j)
            	{
            		cout<<"\n\t\t"<<(i + 1)<<" - "<<(j + 1)<<": 0\n";
                 continue;
