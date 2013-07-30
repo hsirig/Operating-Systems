@@ -11,7 +11,7 @@ int main()
     int via[nodes][nodes];
     if(nodes > 0)
     {
-    	memset(distanceVector, INT_MAX, sizeof(distanceVector));
+    		memset(distanceVector, INT_MAX, sizeof(distanceVector));
        	memset(via, 0, sizeof(via));
         cout<<"\n\n\tFor each pair of nodes, if adjacent - 1, else - any: ";
         cout<<"\n\n";
