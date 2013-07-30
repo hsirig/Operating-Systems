@@ -3,7 +3,7 @@
 #define INT_MAX 10
 int main()
 {
-	int nodes, i, j, k, temp;
+    int nodes, i, j, k, temp;
     cout<<"\n\n\n\t\t\tDISTANCE VECTOR ROUTING";
     cout<<"\n\n\n\tEnter the no. of nodes: ";
     cin>>nodes;
@@ -25,8 +25,8 @@ int main()
     {
     	for(j = 0; j < nodes; j++)
         {
-        	if(i == j)
-        	{
+            if(i == j)
+            {
             	cout<<"\n\t\t"<<(i + 1)<<" - "<<(j + 1)<<": 0\n";
             	continue;
             }
@@ -36,7 +36,7 @@ int main()
             	cin>>temp;
             	if(temp == 1)
             	{
-                	cout<<"\n\t\tEnter cost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": ";
+               	    cout<<"\n\t\tEnter cost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": ";
                     cin>>distanceVector[i][j];
                     distanceVector[j][i] = distanceVector[i][j];
                     via[i][j] = j + 1;
@@ -45,9 +45,9 @@ int main()
             else
             {
             	if(distanceVector[i][j] > 50000)
-                	cout<<"\n\t\tCost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": -"<<"\n";
+                    cout<<"\n\t\tCost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": -"<<"\n";
                 else
-            		cout<<"\n\t\tCost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": "<<distanceVector[i][j]<<"\n";
+            	    cout<<"\n\t\tCost of the link between nodes "<<(i + 1)<<" and "<<(j + 1)<<": "<<distanceVector[i][j]<<"\n";
             }
         }
     }
@@ -57,7 +57,7 @@ int main()
         via[i][i] = i;
         for(j = 0; j < nodes; j++)
         {
-        	if(distanceVector[i][j] != INT_MAX)
+            if(distanceVector[i][j] != INT_MAX)
             {
             	for(k = 0; k < nodes; k++)
                 {
@@ -66,7 +66,7 @@ int main()
                     	distanceVector[i][k] = distanceVector[i][j] + distanceVector[j][k];
                         via[i][k] = j + 1;
                     }
-				}
+		}
             }
         }
     }
@@ -77,24 +77,24 @@ int main()
         cout<<"\t\tInformation stored at each node\t\tDistance to reach node\n\n";
         for(i = 0; i < nodes; i++)
         {
-        	cout<<"\t\t\t\t"<<(i + 1)<<"\t\t\t";
+            cout<<"\t\t\t\t"<<(i + 1)<<"\t\t\t";
             for(j = 0; j < nodes; j++)
             {
             	if(i != j)
-                	cout<<"  "<<distanceVector[i][j];                			
+                    cout<<"  "<<distanceVector[i][j];                			
                 else
-                	cout<<"  "<<0;
+                    cout<<"  "<<0;
             }
             cout<<"\n\n"<< endl<<"\n";
-		}
+	}
         for(i = 0; i < nodes; i++)
         {
-	    	cout<<"\n\n\t\t\tROUTING TABLE FOR NODE - "<<(i + 1);
+            cout<<"\n\n\t\t\tROUTING TABLE FOR NODE - "<<(i + 1);
             cout<<"\n\n\t\tDestination\t\tCost\t\tNext Hop\n\n";
             for(j = 0; j < nodes; j++)
             {
             	if(i != j)
-                	cout<<"\t\t\t"<<(j + 1)<<"\t\t"<<distanceVector[i][j]<<"\t\t"<<via[i][j]<<"\n\n";
+                    cout<<"\t\t\t"<<(j + 1)<<"\t\t"<<distanceVector[i][j]<<"\t\t"<<via[i][j]<<"\n\n";
             }
             cout<<"\n\n\t\t\t * 0 - denotes direct link.\n";
         }
