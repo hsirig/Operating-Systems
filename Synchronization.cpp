@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
                 cout<<"\nError creating reader thread...!!!";
             sleep(readerWriterSleepTime);
         }
-  in.close();
+        in.close();
     }
     else
     {
